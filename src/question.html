@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="discription" content="">
+    <meta name="author" content="FanLinbo">
+    <link rel="icon" href="../img/icon.png">
+    <title>AfterShower</title>
+
+    <link href="../dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../dist/css/sticky-footer-navbar.css" rel="stylesheet">
+
+</head>
+<>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapse" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">Dong OJ</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Problem<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">type1</a> </li>
+                        <li><a href="#">type2</a> </li>
+                        <li class="divider"></li>
+                        <li><a href="#">hard</a> </li>
+                        <li><a href="#">medium</a> </li>
+                        <li><a href="#">easy</a> </li>
+                    </ul>
+                </li>
+                <li><a href="#">Submission</a></li>
+                <li><a href="#">Discuss</a></li>
+                <li><a href="#">News</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+                <div class="form-group">
+                    <input type="text" placeholder="Email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input type="password" placeholder="password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success">Sign In</button>
+                <button class="btn btn-primary" id="signUpButton">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="page-header">
+        <h3>how much you par for your smart?</h3>
+    </div>
+    <blockquote>
+        <p>first day you buy a car,next day two,count how much will you cost after many days</p>
+        <p><strong>Tips:</strong></p>
+        <p>use <code>string.toArray()</code>will help you alot</p>
+    </blockquote>
+    <p></p>
+    <p class="leader">
+        <a href="#" class="btn btn-group-lg btn-primary">discuss</a>
+    </p>
+    <hr />
+    <div class="row">
+        <div class="col-md-1"><p>Recent Submission</p></div>
+        <div class="col-md-2 col-lg-offset-1"><select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select></div>
+    </div>
+    <textarea rows="20" cols="150" id="TextArea1">1.</textarea>
+</div>
+
+
+<script src="../dist/js/jQuery.js"></script>
+<script src="../dist/js/bootstrap.js"></script>
+<!--
+<script>
+    $(function(){
+        $("#signUpButton").click(function(){
+            $("#sighUpModal").modal("toggle");
+        });
+    });
+</script>
+-->
+<script language="JavaScript" type="text/javascript">
+    var count = 1;
+    $(document).ready(function() {
+        $("#TextArea1").bind("keyup", function(event) {
+            if (event.keyCode == 13) {
+                count++;
+                var newHtml = $("#TextArea1").html() + "<br/>" + count.toString() + ".";
+                $("#TextArea1").html(newHtml);
+            }
+        });
+    });
+</script>
+</body>
+</html>
