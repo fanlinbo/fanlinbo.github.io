@@ -50,7 +50,7 @@
 						<input type="password" placeholder="password" class="form-control">
 					</div>
 					<button type="submit" class="btn btn-success">Sign In</button>
-					<button type="submit" class="btn btn-primary" id="sub">Sign Up</button>
+					<button class="btn btn-primary" id="signUpButton">Sign Up</button>
 				</form>
 			</div>
 		</div>
@@ -102,7 +102,7 @@
 		</div>
 	</div>
 
-	<div class="modal" id="signupm">
+	<div class="modal" id="signUpModal">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -148,10 +148,10 @@
 	<script src="../dist/js/bootstrap.js"></script>
 	<script>
 		$(function(){
-			$(#sub).click(function(){
-				$(#signupm).modal("toggle")
-			})
-		})
+			$("#signUpButton").click(function(){
+				$("#sighUpModal").modal("toggle");
+			});
+		});
 	</script>
 </body>
 </html>
